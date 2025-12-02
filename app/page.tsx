@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     title: "Synergy Auto Zone | Premium Car Dealership in Georgetown, Guyana",
     description:
       "Your trusted car dealership in Georgetown, Guyana. Transparent pricing, exceptional service, and quality vehicles.",
-    url: "/",
+    url: "https://synergyautozone.vercel.app",
     siteName: "Synergy Auto Zone",
     images: [
       {
-        url: "/logo.png",
+        url: "https://synergyautozone.vercel.app/logo.png",
         width: 1200,
         height: 630,
         alt: "Synergy Auto Zone - Premium Car Dealership",
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
     title: "Synergy Auto Zone | Premium Car Dealership in Georgetown, Guyana",
     description:
       "Your trusted car dealership in Georgetown, Guyana. Transparent pricing, exceptional service, and quality vehicles.",
-    images: ["/logo.png"],
+    images: ["https://synergyautozone.vercel.app/logo.png"],
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://synergyautozone.vercel.app",
   },
 };
 
