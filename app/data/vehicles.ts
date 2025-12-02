@@ -9,6 +9,7 @@ export const vehicles: Vehicle[] = [
     year: 2016,
     price: 2750000,
     currency: "GYD",
+    active: true,
     features: [
       "Push Start (2 Key Fobs)",
       "1320 cc Engine",
@@ -49,6 +50,7 @@ export const vehicles: Vehicle[] = [
     year: 2014,
     price: 3200000,
     currency: "GYD",
+    active: false,
     features: [
       "WXB Package",
       "Premium Trim",
@@ -81,6 +83,7 @@ export const vehicles: Vehicle[] = [
     year: 2016,
     price: 8300000,
     currency: "GYD",
+    active: false,
     features: [
       "2000 cc Engine",
       "2 WD",
@@ -125,21 +128,64 @@ export const vehicles: Vehicle[] = [
       bankFinancing: true,
     },
   },
+  {
+    id: "4",
+    slug: "2015-toyota-regius-hiace-van-pitbull",
+    make: "Toyota",
+    model: "Regius Hiace Van Pitbull",
+    year: 2015,
+    price: 3850000,
+    currency: "GYD",
+    active: true,
+    features: [
+      "1990 cc Engine",
+      "2 WD",
+      "Automatic Transmission",
+      "Free Registration / Road License / Fitness / Number Plates",
+    ],
+    specifications: {
+      engine: "1990 cc",
+      transmission: "Automatic",
+      drivetrain: "2 WD",
+      fuelType: "Gasoline",
+    },
+    description:
+      "2015 Toyota Regius Hiace Van Pitbull - Perfect for commercial use or large families! This spacious van features a powerful 1990 cc engine, automatic transmission, and 2WD drivetrain. Ideal for businesses, transportation services, or anyone needing extra space. Includes free registration, road license, fitness, and number plates. Cash or bank financing available. Visit us at 2 Friendship, East Bank Demerara or send a message for more details!",
+    images: [
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/505862233_122160015422538386_5524538464187876661_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/506445310_122160015452538386_932288450095846238_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/495175315_122160015482538386_9132997349472022676_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/499567157_122160015626538386_3398438222730006097_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/506778916_122160015602538386_8492962754800455004_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/504248339_122160015662538386_2040862791119461701_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/494123324_122160015758538386_4918504102248528097_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/505390145_122160015806538386_3573761048696308608_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/505355393_122160015860538386_1044492069900903474_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/495210037_122160015914538386_2359323999203203034_n.jpg",
+      "/vehicles/2015-Toyota-Regius-Hiace-Van-Pitbull/492467731_122160018296538386_1417574543799300318_n.jpg",
+    ],
+    availability: "available",
+    financing: {
+      available: true,
+      cashOnly: true,
+      bankFinancing: true,
+    },
+  },
 ];
 
 export function getVehicleById(id: string): Vehicle | undefined {
-  return vehicles.find((v) => v.id === id);
+  return vehicles.find((v) => v.id === id && v.active);
 }
 
 export function getVehicleBySlug(slug: string): Vehicle | undefined {
-  return vehicles.find((v) => v.slug === slug);
+  return vehicles.find((v) => v.slug === slug && v.active);
 }
 
 export function getAllVehicles(): Vehicle[] {
-  return vehicles;
+  return vehicles.filter((v) => v.active);
 }
 
 export function getFeaturedVehicles(): Vehicle[] {
-  return vehicles.filter((v) => v.availability === "available").slice(0, 2);
+  return vehicles.filter((v) => v.active && v.availability === "available").slice(0, 2);
 }
 

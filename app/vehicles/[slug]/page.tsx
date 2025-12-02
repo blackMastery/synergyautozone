@@ -184,12 +184,6 @@ export default async function VehicleDetailPage({ params }: Props) {
 
             <div className="space-y-3">
               <Link
-                href="#test-drive"
-                className="block w-full bg-[#DC2626] text-white px-6 py-4 rounded-lg font-semibold text-center hover:bg-[#B91C1C] transition-colors"
-              >
-                Book a Test Drive
-              </Link>
-              <Link
                 href="/#contact"
                 className="block w-full bg-transparent border-2 border-[#DC2626] text-[#DC2626] px-6 py-4 rounded-lg font-semibold text-center hover:bg-[#DC2626] hover:text-white transition-colors"
               >
@@ -222,34 +216,6 @@ export default async function VehicleDetailPage({ params }: Props) {
           <p className="text-gray-700 leading-relaxed">{vehicle.description}</p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8" id="test-drive">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Book a Test Drive</h2>
-          <p className="text-gray-700 mb-6">
-            Interested in this vehicle? Contact us to schedule a test drive or get more information.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="tel:+5927192959"
-              className="bg-[#DC2626] text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#B91C1C] transition-colors"
-            >
-              Call: +592 719-2959
-            </a>
-            <a
-              href="https://wa.me/5927192959"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-green-600 transition-colors"
-            >
-              WhatsApp Us
-            </a>
-            <a
-              href="mailto:synergyautozone@gmail.com"
-              className="bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-200 transition-colors"
-            >
-              Email Us
-            </a>
-          </div>
-        </div>
 
         <div className="text-center">
           <Link

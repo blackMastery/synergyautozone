@@ -53,12 +53,6 @@ export default function FeaturedVehicles() {
                   >
                     View Details
                   </Link>
-                  <Link
-                    href={`/vehicles/${vehicle.slug}#test-drive`}
-                    className="bg-transparent border-2 border-[#DC2626] text-[#DC2626] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#DC2626] hover:text-white transition-colors"
-                  >
-                    Book Test Drive
-                  </Link>
                 </div>
               </div>
             </article>

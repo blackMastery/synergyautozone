@@ -5,6 +5,7 @@ export interface Vehicle {
   model: string;
   year: number;
   price: number;
+  active: boolean;
   currency?: string;
   features: string[];
   specifications: {
