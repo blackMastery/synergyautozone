@@ -199,7 +199,7 @@ export default function VehiclesPage() {
                   priceCurrency: vehicle.currency || "GYD",
                   availability: vehicle.availability === "available" ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
                 },
-                url: `https://synergyautozone.com/vehicles/${vehicle.slug}`,
+                url: `https://synergyautozone.vercel.app/vehicles/${vehicle.slug}`,
               },
             })),
           }),

@@ -73,9 +73,9 @@ export default function Contact() {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Synergy Auto Zone",
-              image: "https://synergyautozone.com/og-image.jpg",
-              "@id": "https://synergyautozone.com",
-              url: "https://synergyautozone.com",
+              image: "https://synergyautozone.vercel.app/logo.png",
+              "@id": "https://synergyautozone.vercel.app",
+              url: "https://synergyautozone.vercel.app",
               telephone: "+5927192959",
               email: "synergyautozone@gmail.com",
               address: {

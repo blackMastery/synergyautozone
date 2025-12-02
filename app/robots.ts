@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || "https://synergyautozone.com"}/sitemap.xml`,
+    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || "https://synergyautozone.vercel.app"}/sitemap.xml`,
   };
 }
 

@@ -34,6 +34,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const description = `${vehicle.year} ${vehicle.make} ${vehicle.model} for sale at Synergy Auto Zone. ${vehicle.description} Features: ${vehicle.features.slice(0, 3).join(", ")}. Located in Georgetown, Guyana.`;
 
+  // Use vehicle images for OG tags, fallback to logo only if no vehicle images exist
+  const ogImages = vehicle.images.length > 0
+    ? vehicle.images.slice(0, 5).map((image) => ({
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
+      }))
+    : [
+        {
+          url: "/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Synergy Auto Zone - Premium Car Dealership",
+        },
+      ];
+
   return {
     title,
     description,
@@ -52,21 +69,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: `/vehicles/${vehicle.slug}`,
       siteName: "Synergy Auto Zone",
-      images: [
-        {
-          url: vehicle.images[0] || "/og-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: `${vehicle.year} ${vehicle.make} ${vehicle.model}`,
-        },
-      ],
+      images: ogImages,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [vehicle.images[0] || "/og-image.jpg"],
+      images: vehicle.images.length > 0 ? [vehicle.images[0]] : ["/logo.png"],
     },
     alternates: {
       canonical: `/vehicles/${vehicle.slug}`,

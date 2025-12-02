@@ -6,15 +6,20 @@ export default function Navigation() {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/logo.png"
-              alt="Synergy Auto Zone Logo"
-              width={200}
-              height={60}
-              className="h-12 w-auto"
-              priority
-            />
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden bg-black shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Synergy Auto Zone Logo"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <span className="text-xl font-bold text-gray-900 hidden sm:block whitespace-nowrap">
+              Synergy Auto Zone
+            </span>
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link

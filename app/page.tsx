@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Synergy Auto Zone",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Synergy Auto Zone - Premium Car Dealership",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Synergy Auto Zone | Premium Car Dealership in Georgetown, Guyana",
     description:
       "Your trusted car dealership in Georgetown, Guyana. Transparent pricing, exceptional service, and quality vehicles.",
-    images: ["/og-image.jpg"],
+    images: ["/logo.png"],
   },
   alternates: {
     canonical: "/",
@@ -67,9 +67,9 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Synergy Auto Zone",
-            image: "https://synergyautozone.com/og-image.jpg",
-            "@id": "https://synergyautozone.com",
-            url: "https://synergyautozone.com",
+            image: "https://synergyautozone.vercel.app/logo.png",
+            "@id": "https://synergyautozone.vercel.app",
+            url: "https://synergyautozone.vercel.app",
             telephone: "+5927192959",
             email: "synergyautozone@gmail.com",
             address: {

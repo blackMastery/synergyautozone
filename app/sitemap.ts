@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllVehicles } from "./data/vehicles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://synergyautozone.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://synergyautozone.vercel.app";
   const vehicles = getAllVehicles();
 
   const vehicleUrls: MetadataRoute.Sitemap = vehicles.map((vehicle) => ({
