@@ -30,7 +30,7 @@ export default function Navigation() {
                 priority
               />
             </div>
-            <span className="text-xl font-bold text-gray-900 hidden sm:block whitespace-nowrap">
+            <span className="text-xl font-bold text-gray-900  sm:block whitespace-nowrap">
               Synergy Auto Zone
             </span>
           </Link>
