@@ -79,7 +79,7 @@ export default function VehiclesPage() {
                 placeholder="Search by make, model, or year..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#DC2626] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg text-black placeholder:text-gray-500 focus:ring-2 focus:ring-[#DC2626] focus:border-transparent"
               />
             </div>
             <div>
@@ -90,7 +90,7 @@ export default function VehiclesPage() {
                 id="make"
                 value={filterMake}
                 onChange={(e) => setFilterMake(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#DC2626] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-[#DC2626] focus:border-transparent"
               >
                 <option value="all">All Makes</option>
                 {makes.map((make) => (
@@ -108,7 +108,7 @@ export default function VehiclesPage() {
                 id="sort"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#DC2626] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg text-black focus:ring-2 focus:ring-[#DC2626] focus:border-transparent"
               >
                 <option value="newest">Newest First</option>
                 <option value="year-desc">Year (Newest)</option>
