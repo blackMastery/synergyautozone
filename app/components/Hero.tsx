@@ -1,10 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
+import Threads from "./backgrounds/Threads";
 
 export default function Hero() {
   return (
-    <section className="relative bg-black text-white py-20 px-4 sm:py-32">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="relative bg-black text-white py-20 px-4 sm:py-32 overflow-hidden">
+      <Threads
+        color={[0.86, 0.15, 0.15]}
+        amplitude={1.2}
+        distance={0.3}
+        enableMouseInteraction={true}
+        className="absolute inset-0"
+      />
+      <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className="mb-8 flex justify-center">
           <Image
             src="/logo.png"
